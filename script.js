@@ -68,7 +68,7 @@ var swiper = new Swiper(".product-slider", {
     loop: true,
     spaceBetween: 20,
     autoplay:{
-      delay: 7500,
+      delay: 1500,
       disableOnInteraction: false,
     },
   
