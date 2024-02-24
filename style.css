@@ -90,15 +90,28 @@ section
 
 
 }
+.header .logo
+{
+    height: 9rem;
+ justify-content: center;
+ align-items: center;
+ display: flex;
 
-.header .logo {
+}
+.header .logo:hover
+{
+    color: var(--green);
+}
+
+
+/* .header .logo {
     font-size: 2.5rem;
     font-weight: bolder;
 }
 
 .header .logo i {
     color: var(--green);
-}
+} */
 
 .header .navbar a {
     font-size: 1.7rem;
@@ -358,7 +371,8 @@ section
 {
     box-shadow:1px 1px 10px 4px var(--green);
 }
-.features .box-container .box img{
+.features .box-container .box img
+{
     margin: 1rem 0;
     height: 15 rem;
 
@@ -472,6 +486,124 @@ line-height: 1.8;
     line-height: 1.8;
     padding: 1rem 0;
 }
+.Beverages .box-container
+{
+ /* border: 0px solid; */
+ display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(26rem,1fr));/* to make column */
+  gap: 1.5rem;
+}
+.Beverages .box-container .box
+{
+    border: 2px solid black;
+    padding: 3rem 0;
+    background: #fff;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    outline: var(--outline);
+    outline-offset: -1rem;
+    text-align: center;
+
+}
+.Beverages .box-container .box:hover
+{
+    box-shadow:1px 1px 10px 4px var(--green);
+}
+.Beverages .box-container .box img
+{
+    /* border: 2px solid black; */
+     height: 30rem;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 3rem;
+    
+}
+/* .Beverages .box-container .box:hover img
+{
+    margin: 1rem 0;
+    height: 15rem;
+
+
+} */
+.Beverages .box-container .box h4
+{
+font-size: 1.5rem;
+}
+.Beverages .box-container .box p
+{
+    /* border: 2px solid black; */
+    font-size: 1.7rem;
+    color: var(--light-color);
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+.Beverages .heading h1
+{
+   font-size: 3rem;
+}
+
+.Snacks_Store .box-container
+{
+ /* border: 0px solid; */
+ display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(26rem,1fr));/* to make column */
+  gap: 1.5rem;
+}
+.Snacks_Store .box-container .box
+{
+    border: 2px solid black;
+    padding: 3rem 0;
+    background: #fff;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    outline: var(--outline);
+    outline-offset: -1rem;
+    text-align: center;
+
+}
+.Snacks_Store .box-container .box:hover
+{
+    box-shadow:1px 1px 10px 4px var(--green);
+}
+.Snacks_Store .box-container .box img
+{
+    /* border: 2px solid black; */
+     height: 30rem;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 3rem;
+    
+}
+/* .Beverages .box-container .box:hover img
+{
+    margin: 1rem 0;
+    height: 15rem;
+
+
+} */
+.Snacks_Store .box-container .box h4
+{
+font-size: 1.5rem;
+}
+.Snacks_Store .box-container .box p
+{
+    /* border: 2px solid black; */
+    font-size: 1.7rem;
+    color: var(--light-color);
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+.Snacks_Store .heading h1
+{
+   font-size: 3rem;
+}
+/* .Beverages .box-container .box:hover p
+{
+    font-size: 1.7rem;
+    color: var(--light-color);
+    line-height: 1.8;
+    padding: 1rem 0;
+} */
 /* categories */
 /* Review */
 .review .review-slider
@@ -609,6 +741,13 @@ line-height: 1.8;
     font-size: 2.5rem;
     color: var(--black);
     padding: 1rem 0;
+}
+.footer .box-container .box h3 img
+{
+    height: 9rem;
+ justify-content: center;
+ align-items: center;
+ display: flex;
 }
 .footer .box-container .box h3 i
 {
