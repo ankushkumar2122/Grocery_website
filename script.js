@@ -87,3 +87,59 @@ var swiper = new Swiper(".product-slider", {
     },
   },
     });
+
+   
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const addToCartButtons = document.querySelectorAll('.btn.add-to-cart');
+    const deleteButtons = document.querySelectorAll('.shopping-cart .box .fa-trash');
+    const totalPriceElement = document.querySelector('.shopping-cart .total');
+
+    let totalPrice = calculateTotalPrice();
+
+    // Add event listeners to "Add to Cart" buttons
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function(event) {
+            const item = event.target.closest('.box');
+            const itemName = item.querySelector('h1').innerText;
+            const itemPrice = parseFloat(item.querySelector('.price').innerText.replace('$', ''));
+
+            // Add item to the cart (for example, display in console)
+            console.log('Added to cart:', itemName, 'Price:', itemPrice);
+
+            // You can add the item to the cart logic here
+            // For now, let's assume we're just logging it
+
+            // Update the total price
+            totalPrice += itemPrice;
+            totalPriceElement.innerText = `Total : $${totalPrice.toFixed(2)}/-`;
+        });
+    });
+
+    // Add event listeners to "Delete" buttons
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', function(event) {
+            const item = event.target.closest('.box');
+            const itemPrice = parseFloat(item.querySelector('.price').innerText.replace('$', ''));
+
+            // Remove item from the cart (for example, remove from the UI)
+            item.remove();
+
+            // Update the total price
+            totalPrice -= itemPrice;
+            totalPriceElement.innerText = `Total : $${totalPrice.toFixed(2)}/-`;
+        });
+    });
+
+    // Function to calculate the total price of items in the cart
+    function calculateTotalPrice() {
+        let total = 0;
+        const cartItems = document.querySelectorAll('.shopping-cart .box');
+        cartItems.forEach(item => {
+            const itemPrice = parseFloat(item.querySelector('.price').innerText.replace('$', ''));
+            total += itemPrice;
+        });
+        return total;
+    }
+});
